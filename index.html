@@ -1,43 +1,108 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KFC Landing Page</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>KFC Landing Page</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: #d10a20;
+            min-height: 100vh;
+            padding: 20px;
+            color: white;
+        }
+        header {
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 20px;
+        }
+        .logo {
+            width: 80px;
+        }
+        .navigation {
+            display: flex;
+            gap: 20px;
+        }
+        .navigation a {
+            color: white;
+            text-decoration: none;
+            font-size: 1em;
+        }
+        .content {
+            text-align: center;
+            max-width: 600px;
+            margin: 20px 0;
+        }
+        .content p {
+            margin: 10px 0;
+        }
+        .slider {
+            display: flex;
+            gap: 10px;
+            max-width: 600px;
+            overflow-x: auto;
+            padding: 10px 0;
+        }
+        .slides img {
+            width: 100%;
+            max-width: 200px;
+            border-radius: 5px;
+        }
+        .sci {
+            list-style-type: none;
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        .sci a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background-color: #E1306C;
+            border-radius: 50%;
+            color: white;
+            text-align: center;
+            line-height: 40px;
+            font-size: 1.5em;
+            text-decoration: none;
+        }
+    </style>
 </head>
 <body>
-  <div class="main">
-    <header>
-      <a href="#"><img src="logo.png" class="logo"></a>
-      <nav class="navigation">
-        <a href="#">Home</a>
-        <a href="#">Menu</a>
-        <a href="#">About</a>
-        <a href="#">Contact</a>
-      </nav>
-    </header>
-    <div class="content">
-      <div class="text">
-        <h2>It’s Finger Lickin <span>Good</span></h2>
-        <p>KFC uses real Indian village naati koli because a local bird is a fresh bird. Our fresh chicken is carefully hand-breaded and rolled in a secret blend of herbs and spices, then pressure-cooked at a low temperature in high-stability canola oil.</p>
-        <a href="https://online.kfc.co.in/" class="order-btn">Order Now</a>
-      </div>
-      <div class="slider">
-        <img src="burger_fries.png" class="slides">
-        <img src="french_fries.png" class="slides">
-        <img src="burger.png" class="slides">
-        <img src="fried_chicken.png" class="slides">
-      </div>
+    <div class="main">
+        <header>
+            <img src="logo.png" class="logo">
+            <nav class="navigation">
+                <a href="#">Home</a>
+                <a href="#">Menu</a>
+                <a href="#">About</a>
+                <a href="#">Contact</a>
+            </nav>
+        </header>
+        <div class="content">
+            <p>It's Finger Lickin' Good.</p>
+            <p>KFC uses real fresh chicken, hand-breaded with a secret blend of herbs and spices, pressure-cooked to preserve the great taste known worldwide.</p>
+        </div>
+        <div class="slider">
+            <div class="slides"><img src="burger_fries.png"></div>
+            <div class="slides"><img src="french_fries.png"></div>
+            <div class="slides"><img src="burger.png"></div>
+            <div class="slides"><img src="fried_chicken.png"></div>
+        </div>
+        <ul class="sci">
+            <li><a href="https://www.instagram.com/abhi.gna_?igsh=ZDVnd25sdDFhZGJv" target="_blank">I</a></li>
+        </ul>
     </div>
-    <footer>
-      <div class="social">
-        <a href="#">Facebook</a>
-        <a href="#">Twitter</a>
-        <a href="#">Instagram</a>
-      </div>
-      <p>Always Fresh</p>
-    </footer>
-  </div>
 </body>
 </html>
