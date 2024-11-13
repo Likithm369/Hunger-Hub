@@ -3,144 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KFC Landing Page | Responsive Design</title>
+  <title>KFC Landing Page</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <section class="main">
+  <div class="main">
     <header>
       <a href="#"><img src="logo.png" class="logo"></a>
-      <div class="toggle"></div>
-      <ul class="navigation">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Contact</a></li>
-      </ul>
+      <nav class="navigation">
+        <a href="#">Home</a>
+        <a href="#">Menu</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+      </nav>
     </header>
     <div class="content">
       <div class="text">
-        <p>Its Finger<br>Lickin <span>Good.</span></p>
-        <p>  
-        KFC uses real indian village naati koli because a local bird is a fresh bird. Our fresh chicken is carefully hand-breaded and rolled 7 times in the secret blend of herbs and spices before being scooped and folded in the breading mix 7 times. The chicken is then pressure cooked at a low temperature in high stability canola oil to preserve that great taste we're known for around the world.</p>
-        
-        <!DOCTYPE html> 
-<html> 
-	
-<head> 	
-	<!-- Style to create button -->
-	<style> 
-		.GFG { 
-			background-color: white; 
-			border: 2px solid black; 
-			color: green; 
-			padding: 5px 10px; 
-			text-align: center; 
-			display: inline-block; 
-			font-size: 20px; 
-			margin: 10px 30px; 
-			cursor: pointer; 
-		} 
-	</style> 
-</head> 
-
-<body> 
-	
-	<!-- Adding link to the button on the onclick event -->
-	<button class="GFG"
-	onclick="window.location.href = 'https://online.kfc.co.in/';"> 
-		order Now 
-	</button> 
-</body> 
-
-</html>					 
-
+        <h2>It’s Finger Lickin <span>Good</span></h2>
+        <p>KFC uses real Indian village naati koli because a local bird is a fresh bird. Our fresh chicken is carefully hand-breaded and rolled in a secret blend of herbs and spices, then pressure-cooked at a low temperature in high-stability canola oil.</p>
+        <a href="https://online.kfc.co.in/" class="order-btn">Order Now</a>
       </div>
       <div class="slider">
-        <div class="slides active">
-          <img src="burger_fries.png">
-        </div>
-        <div class="slides">
-          <img src="french_fries.png">
-        </div>
-        <div class="slides">
-          <img src="burger.png">
-        </div>
-        <div class="slides">
-          <img src="fried_chicken.png">
-        </div>
-	 <div class="slides active">
-          <img src="maggie.jpeg">
-        </div>
-	 <div class="slides active">
-          <img src="biryani.png">
-        </div>
+        <img src="burger_fries.png" class="slides">
+        <img src="french_fries.png" class="slides">
+        <img src="burger.png" class="slides">
+        <img src="fried_chicken.png" class="slides">
       </div>
     </div>
-
-    <div class="footer">
-      <ul class="sci">
-        <li><a href="#"><ion-icon name="logo-facebook"></ion-icon></a></li>
-        <li><a href="#"><ion-icon name="logo-twitter"></ion-icon></a></li>
-        <li><a href="#"><ion-icon name="logo-instagram"></ion-icon></a></li>
-      </ul>
-      <div class="prevNext">
-        <p>Always Fresh</p>
-        <span class="prev"><ion-icon name="chevron-back-outline"></ion-icon></span>
-        <span class="next"><ion-icon name="chevron-forward-outline"></ion-icon></span>
+    <footer>
+      <div class="social">
+        <a href="#">Facebook</a>
+        <a href="#">Twitter</a>
+        <a href="#">Instagram</a>
       </div>
-    </div>
-  </section>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-
-  <script>
-    //toggle 
-    const menutoggle = document.querySelector('.toggle');
-    const navigation = document.querySelector('.navigation');
-    menutoggle.onclick = function(){
-      menutoggle.classList.toggle('active')
-      navigation.classList.toggle('active')
-    }
-
-    //slider
-    const slides = document.querySelectorAll('.slides');
-    const prev = document.querySelector('.prev');
-    const next = document.querySelector('.next');
-
-    i = 0;
-    
-    function ActiveSlide(n){
-      for(slide of slides)
-      slide.classList.remove('active');
-      slides[n].classList.add('active');
-    }
-
-    // function for next btn
-    next.addEventListener('click', function(){
-      if(i == slides.length - 1){
-        i = 0;
-        ActiveSlide(i);
-      }
-      else 
-      {
-        i++;
-        ActiveSlide(i);
-      }
-    })
-
-     // function for prev btn
-     prev.addEventListener('click', function(){
-      if(i == 0){
-        i = slides.length - 1;
-        ActiveSlide(i);
-      }
-      else 
-      {
-        i--;
-        ActiveSlide(i);
-      }
-    })
-  </script>
+      <p>Always Fresh</p>
+    </footer>
+  </div>
 </body>
 </html>
